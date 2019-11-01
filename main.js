@@ -11,6 +11,14 @@ const Comment          = require('./models/comment');
 const User             = require('./models/user');
 const seedDb           = require('./seeds');
 const flash            = require('connect-flash');
+const http = require('http');
+const port = process.env.PORT || 3000
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/html');
+  res.end('<h1>Hello World</h1>');
+});
 
 var commentsRoutes    = require('./routes/comments');
 var campgroundsRoutes = require('./routes/campgrounds');
@@ -53,6 +61,6 @@ app.use(campgroundsRoutes);
 
 
 
-app.listen(3000, function() {
-  console.log('listening on port 3000');
+server.listen(port,() => {
+  console.log(`Server running at port `+port);
 });
