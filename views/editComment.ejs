@@ -1,0 +1,14 @@
+<% include partials/header %>
+
+
+
+<div class="new-camp">
+    <h1 class="new-camp-title">Edit Comment</h1>
+
+    <form class="new-camp-form" action="/campgrounds/<%= campground_id %>/comments/<%= comment._id %>?_method=PUT" method="POST">
+        <input class="camp-name" type="text" placeholder="Text" name="comment[text]" value = "<%= comment.text %>" required>
+        <input class="camp-submit" type="submit">
+    </form>
+</div>
+
+<% include partials/footer %>

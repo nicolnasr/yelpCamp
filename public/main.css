@@ -1,0 +1,680 @@
+body {
+    margin: 0;
+    padding: 0; 
+    font-family: 'Lato', sans-serif;
+
+}
+
+nav {
+    top: 0;
+    position: fixed;  
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    background-color: rgba(59, 45, 45, 0.6);
+    display: flex;
+    flex-direction: row;
+    padding: 0 10px;  
+}
+
+.nav-title a {
+    padding: 14px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.nav-body {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-body-left {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-body-right {
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-body li a {
+    color: white;
+    text-decoration: none;
+    padding: 18.2px 20px;
+    margin: 0 30px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0);
+}
+
+.nav-body li a:hover {
+    border-bottom: 3px solid #ffffff;
+    transition: 0.3s;
+}
+
+.mt {
+    overflow: hidden;
+    margin-top: 360px !important;
+}
+
+.nav-body-compressed {
+    padding: 0; 
+    display: block;
+    list-style: none;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    margin: 0;
+    left: 0;
+    top: 60px;
+    background-color: rgba(59, 45, 45, 0.6);
+}
+
+.nav-body-compressed li a {
+    text-align: center;
+    margin-left: 50%;
+    transform: translate(-50%);
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 50px 20px;
+    margin-top: 30px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0);
+}
+
+.nav-body-compressed li a:hover {
+    border-bottom: 3px solid #ffffff;
+    transition: 0.3s;
+}
+
+.header {
+    padding-top: 130px;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://images5.alphacoders.com/555/thumb-1920-555700.jpg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-position-y: 130%;
+    background-size: initial;
+}
+
+.header-cont {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+#header-title {
+    text-shadow: 2px 1px 3px rgba(0,0,0,0.88);
+    color: white;
+    text-align:center;
+    font-size: 80px;
+    margin-top: 70px;
+    margin-bottom: 0;
+}
+
+#header-info {
+    color: white;
+    text-align:center;
+    font-size: 2rem;
+}
+
+.border-b {
+    margin: 0 auto;
+    padding: 20px 0;
+    border-bottom: 1.5px solid white;
+    max-width: 800px;
+}
+
+.campground-btn {
+    width: 300px;
+    padding: 15px 20px;
+    color: black;
+    background-color: rgb(224, 224, 224);
+    font-size: 1.2rem;
+    border: 0;
+    margin: 50px auto;
+    border-radius: 2px;
+}
+
+.camp-btn-div {
+    margin: 0 auto;
+    margin-top: 30px;
+    max-width: 300px;
+}
+
+.campground-btn:hover {
+    transition: .35s ease-in-out;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.568);
+    color: white;
+    border:none;
+}
+
+.dots {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 0;
+    width: 100px;
+    margin: 13px auto;
+    display: flex;
+}
+
+.dot a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.dot-selected {
+    background-color: white;
+    border-radius: 360px;
+}
+
+.nav2 {
+    background-color: rgb(166, 166, 180);
+}
+
+.campground-header {
+    transition: 0.5s;
+    background-color: rgba(234, 234, 238, 0.753);
+    max-width: 1000px;
+    margin: 100px auto;
+    padding: 50px 0;
+    text-align: center;
+    border-radius: 5px; 
+}
+
+#campground-header-title {
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+#campground-header-info {
+    margin: 25px 0;
+    padding: 0;
+    font-size: 1.4rem;
+}
+
+.more-info{
+    width: 10px;
+}
+
+.new-camp-btn {
+    transition: 0.2s;
+    width: 250px; 
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.new-camp-btn a{
+    padding: 15px 20px; 
+    border: 1px solid rgb(120, 120, 153);
+    border-radius: 5px;
+    width: 230px; 
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    color: black;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.new-camp-btn a:hover {
+    color: white;
+    border-color: rgb(171, 171, 209);
+    background-color: rgb(171, 171, 209);
+}
+
+.mt2 {
+    margin-top: 360px;
+}
+
+.new-camp {
+    margin-top: 10px;
+    padding-top: 100px;
+}
+
+.campgrounds-listing {
+    max-width: 1000px;  
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    grid-gap: 20px;
+}
+
+.campground-container {
+    text-decoration: none;
+    list-style: none;
+    text-align: center;
+    max-width: 500px;
+}
+
+.campground-container li {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: black;
+    font-size: 1.2rem;
+    background-color: rgb(230, 230, 230);
+    padding: 10px;
+    transition: 0.2s;
+}
+
+.campground-container:hover li {
+    background-color: rgb(206, 206, 218);
+}
+
+.new-camp-title {
+    padding-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.msg {
+    z-index: -2000;
+    top: 65px;
+    left: 50%;
+    transform: translate(-50%);
+    display: block;
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    position: fixed;
+    font-size: 1rem;
+    border-radius: 2px;
+    padding: 5px;
+    height: 20px;
+    text-align: center;
+    color: white;
+    background-color: rgba(255, 27, 27, 0.812);
+}
+
+.msg-out {
+    z-index: -2000;
+    top: 65px;
+    left: 50%;
+    transform: translate(-50%);
+    display: block;
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    position: fixed;
+    font-size: 1rem;
+    border-radius: 2px;
+    padding: 5px;
+    height: 20px;
+    text-align: center;
+    color: white;
+    background-color: #7ae256e3;
+}
+
+.new-camp-form {
+    padding: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.new-camp-form input{
+    border-radius: 5px;
+    border:1px solid rgb(197, 197, 197);
+    margin-bottom: 10px;
+    font-size:1.05rem;
+    padding: 10px 20px;
+}
+
+.new-camp-form input:focus {
+    outline-style: ridge
+}
+
+.new-camp-form input[type="submit"] {
+    color: rgb(240, 238, 238)   ;
+    margin-top: 10px;
+    font-size:1.5rem;
+    padding: 15px;
+    transition: 0.2s;
+    background-color: rgb(78, 100, 228);
+}
+
+.new-camp-form input[type="submit"]:hover {
+    background-color: rgb(68, 88, 196);
+    cursor: pointer;
+}
+
+.campground-container img {
+    height: 330px;
+    width: 100%;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: 0.5s;
+}
+
+.hum-border {
+  width: 30px;
+  height: 1px;
+  border-bottom: 1px solid #d2d2d2;
+  margin-top: 6px;
+}
+
+.humberger-menu {
+  display: none;
+  margin-right: 20px;
+  border-radius: 3px;
+  border: 1px solid #d2d2d2;
+  padding: 5px 10px 11px 10px;
+  transition: 0.1s;
+}
+
+.humberger-menu:hover {
+  background-color: #3e3e3e;
+  cursor: pointer;
+}
+
+.showtemp {
+    padding-top: 70px;
+}
+
+.show-container {
+    width: 1200px;
+    margin: auto;
+    padding: 10px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+}
+
+.left-show {
+    width: 30%;
+}
+
+.categories {
+    z-index: -100;
+    list-style: none;
+    width: 98%;
+    margin: 0 0 20px 0;
+    padding: 0;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.categories li {
+    width: 100%;
+    padding: 3px 0;
+}
+
+.bb1 {
+    border-bottom: 1px solid lightgray;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.bb2 {
+    border-bottom: 1px solid lightgray;
+}
+
+.bb3 {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.categories li a {
+    color: rgb(78, 78, 78);
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 15px 15px;
+    text-decoration: none;
+}
+
+.categories li a:visited {
+    color: rgb(78, 78, 78);
+}
+
+.active-link {
+    transition: 0.1s;
+    color: white !important;
+}
+
+.active {
+    transition: 0.1s;
+    background-color: rgb(30, 102, 173) !important ;
+}
+
+.right-show {
+    width: 70%;
+}
+
+.name-price {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name-price p b {
+
+    margin-right: 10px;
+}
+
+.right-show img {
+    width: 100%;
+}
+
+.camp-body-show {
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+
+.camp-name-show {
+    padding: 10px 10px 0 10px;
+    font-size: 1.2rem;
+    color: rgb(2, 148, 197);
+    margin: 0;
+}
+
+.camp-author {
+    margin: 0;
+    margin-left: 10px;
+    padding: 0;
+    font-size: 0.9rem;
+    color: rgb(114, 114, 114);
+}
+
+.edit-div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+    margin: 25px 0 10px 0;
+}
+
+.edit-Btn {
+    font-size: 15px;
+    margin: 0 10px 0 0;
+    text-decoration: none;
+    background-color: rgb(64, 64, 211);
+    color: white;
+    padding: 7px 10px;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.edit-Btn:hover {
+    background-color: rgb(29, 29, 250);
+}
+
+.delete-btn {
+    font-size: 15px;
+    background-color: #F34541;
+    color: white;
+    padding: 7px 10px;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #C53C36;
+}
+
+.camp-name-show:hover {
+    cursor: default;
+    text-decoration: underline;
+}
+
+.camp-desc-show {
+    margin: 10px 0;
+    padding: 0 10px;
+    line-height: 23px;
+}
+
+.auth-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.comment-section {
+    background-color: rgb(235, 235, 235);
+
+}
+
+.comment-section {
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.new-comment {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.new-comment a {
+    background-color: rgb(20, 145, 20);
+    padding: 8px 20px 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.new-comment a:hover {
+    background-color: rgb(22, 189, 22);
+}
+
+.comment-author {
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.comment-text {
+    padding: 0;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+@media(max-width: 900px) {
+    .campground-container img {
+        height: 250px;
+    }
+    .nav-body {
+        display: none;
+    }
+    .humberger-menu {
+        display: block;
+        right: 10px;
+        position: absolute;
+    }
+}
+
+@media(max-width: 1240px) {
+    .show-container {
+        width: 90%;
+    }
+}
+
+@media(max-width: 700px) {
+    .campground-container img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 1035px) {
+    .campground-header {
+        margin: 100px 15px;
+    }
+    .campgrounds-listing {
+        margin: 0 15px;
+    }
+}
+
+@media (max-width: 550px) {
+    .left-show {
+        display: none;
+    }
+    .right-show {
+        width: 98%;
+    }
+    #header-title {
+        font-size: 50px;
+    }
+    #header-info {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 320px) {
+    i.fas.fa-campground {
+        display: none;
+    }
+    .campground-btn {
+        width: 230px;
+        padding: 10px 15px;
+        margin: 40px 50%;
+        transform: translate(-50%);
+    }
+    #campground-header-title {
+        font-size: 30px;
+    }
+    #campground-header-info {
+        font-size: 1rem;
+        margin: 25px 10px;
+    }
+    .new-camp-btn a  {
+        width: 100px;
+        font-size: 0.9rem;
+    }
+    .new-camp-btn {
+        width: 200px;
+    }
+}
+
+@media(max-width: 600px) {
+    .campground-container img {
+        height: 100%;
+    }
+    .campgrounds-listing {
+        grid-template-columns: auto;
+    }
+    .border-b {
+        display: none;
+    }
+}

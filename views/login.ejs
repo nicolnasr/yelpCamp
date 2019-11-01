@@ -1,0 +1,16 @@
+<% include partials/header %>
+
+
+
+<div class="new-camp">
+    <h1 class="new-camp-title">Sign-In</h1>
+    
+    <form class="new-camp-form" action="/login" method="POST">
+        <input class="camp-name" type="text" placeholder="Username" name="username" required>
+        <input class="camp-name" type="password" placeholder="password" name="password" required>
+        <input class="camp-submit" type="submit" value = "Login">
+    </form>
+
+</div>
+
+<% include partials/footer %>

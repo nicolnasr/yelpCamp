@@ -1,0 +1,25 @@
+<% include partials/header %>
+
+
+<div class = "campground-header">
+    <p id = "campground-header-title">Welcome to YelpCamp</p>
+    <p id = "campground-header-info">Explore the best campgrounds in the world</p>
+    <div class = "new-camp-btn">
+        <a href="/campgrounds/new">Add New Campground</a>
+    </div>
+</div>
+
+<div class="campgrounds-listing">
+    <% for(var i = 0; i < campground.length; i ++) { %>
+    <a href="/campgrounds/<%= campground[i]._id %>" class = "campground-container">
+        <li><%= campground[i].name %> </li>
+        
+        <img src=" <%= campground[i].image %>">
+        
+    </a>
+    <% } %>
+</div>
+
+
+
+<% include partials/footer %>

@@ -1,0 +1,17 @@
+<% include partials/header %>
+
+
+<div class = "new-camp">
+    <h1 class="new-camp-title">Add a New Campground</h1>
+    
+    <form class="new-camp-form" action="/campgrounds" method="POST">
+        <input class="camp-name" type="text" placeholder="Campground Name" name="camp[name]" required>
+        <input class="camp-img" type="url" placeholder="Campgound Image URL" name="camp[image]" required>
+        <input class = "camp-desc" type="text" placeholder="campground Description" name="camp[description]">
+        <input class="camp-name" type="number" step="0.01" placeholder="$Price/Night" name="camp[price]" required>
+            <!-- <input class="camp-name" type="number" step="0.01" placeholder="$Price/Night" name="camp[likes_count]" required> -->
+        <input class="camp-submit" type="submit">
+    </form>
+</div>
+
+<% include partials/footer %>

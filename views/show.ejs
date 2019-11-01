@@ -1,0 +1,57 @@
+<% include partials/header %>
+
+
+<div class = "show-container">
+    <div class = "left-show">
+        <ul class = "categories">
+            <li class = "bb1 active"><a class = "a1 active-link" href="#1">Category 1</a></li>
+            <li class = "bb2"><a class = "a2" href="#2">Category 2</a></li>
+            <li class = "bb3"><a class = "a3" href="#3">Category 3</a></li>
+        </ul>
+    </div>
+    <div class = "right-show">
+        <div class = "camp-body-show">
+            <img src="<%= campground.image %>" alt="">
+            <div class = "name-price">
+                <div class = "name-author">
+                    <p class='camp-name-show'><%= campground.name %></p>
+                    <p class = 'likes'><%= campground.likes_count %></p>
+                    <p class="camp-author">By <i>'<%= campground.author.username %>'</i></p>
+                </div>
+                <p><b>$<%= campground.price %>/Night</b></p>
+            </div>
+            <p class='camp-desc-show'><%= campground.description %></p>
+            <div class = "edit-div">
+                <% if(currentUser && campground.author.id.equals(currentUser._id)) { %>
+                    <a class="edit-Btn" href="/campgrounds/<%= campground._id %>/edit">Edit</a>
+                    <form action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
+                        <button class="delete-btn">Delete</button>
+                    </form>
+                <% } %> 
+            </div>
+        </div>
+        <div class="comment-section">
+            <p class='new-comment'><a href="/campgrounds/<%= campground._id %>/comments/new">Leave a Review</a></p>
+            <hr>
+            <% campground.comments.forEach(function(comment) { %>
+                <div class = "auth-date">
+                    <p class="comment-author"><b><%= comment.author.username %></b></p>
+                    <p><%= comment.date.getDate() %> / <%= (comment.date.getMonth() + 1) %> / <%= comment.date.getFullYear() %> - <%= comment.date.getHours() %>:<%= comment.date.getMinutes() %></p>
+                </div>
+                <p class = "comment-text"><%= comment.text %></p>
+                <div class = edit-div>
+                    <% if(currentUser && comment.author.id.equals(currentUser._id)) { %>
+                        <a class="edit-Btn" href="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>/edit">Edit</a>
+                        <form action="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                            <button class="delete-btn">Delete</button>
+                        </form>
+                    <% } %>
+                </div>
+            <% }) %>
+        </div>
+        
+        
+    </div>
+</div>
+
+<% include partials/footer %>

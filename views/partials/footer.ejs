@@ -1,0 +1,62 @@
+<script>
+    var body = document.getElementsByTagName("BODY")[0];
+    var humMenu = document.querySelector('.humberger-menu');
+    var navBody = document.querySelector('.nav-body');
+    var navBodyLeft = document.querySelector('.nav-body-left');
+    var navBodyRight = document.querySelector('.nav-body-right');
+    var campgroundHeader = document.querySelector('.campground-header');
+    var newCamp = document.querySelector(".new-camp");
+    var categoryBtn1 = document.querySelector('.bb1');
+    var categoryBtn2 = document.querySelector('.bb2');
+    var categoryBtn3 = document.querySelector('.bb3');
+    var linkBtn1 = document.querySelector('.a1');
+    var linkBtn2 = document.querySelector('.a2');
+    var linkBtn3 = document.querySelector('.a3');
+    var clicked = 0;
+
+    humMenu.addEventListener('click', function () {
+        if(clicked == 1) {
+            body.style.overflow = "scroll";
+            clicked = 0;
+        } else {
+            body.style.overflow = "hidden";
+            clicked = 1;
+        }
+        navBody.classList.toggle("nav-body-compressed");
+        navBody.classList.toggle("nav-body");
+        navBodyLeft.classList.toggle("nav-body-left");
+        navBodyRight.classList.toggle("nav-body-right");
+        campGroundHeader.classList.toggle("campground-header");
+    })
+
+    categoryBtn1.addEventListener('click', function() {
+        categoryBtn1.classList.add('active');
+        linkBtn1.classList.add('active-link');
+        categoryBtn3.classList.remove('active');
+        linkBtn3.classList.remove('active-link');
+        categoryBtn2.classList.remove('active');
+        linkBtn2.classList.remove('active-link');
+    });
+
+    categoryBtn2.addEventListener('click', function () {
+            categoryBtn1.classList.remove('active');
+            linkBtn1.classList.remove('active-link');
+            categoryBtn3.classList.remove('active');
+            linkBtn3.classList.remove('active-link');
+            categoryBtn2.classList.add('active');
+            linkBtn2.classList.add('active-link');
+        });
+
+        categoryBtn3.addEventListener('click', function () {
+                categoryBtn1.classList.remove('active');
+                linkBtn1.classList.remove('active-link');
+                categoryBtn3.classList.add('active');
+                linkBtn3.classList.add('active-link');
+                categoryBtn2.classList.remove('active');
+                linkBtn2.classList.remove('active-link');
+            });
+        
+</script>
+</body>
+
+</html>
