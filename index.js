@@ -20,8 +20,6 @@ const http = require('http');
 const port = process.env.PORT || 3000
 
 
-// seedDb();
-
 mongoose.connect("mongodb://localhost/yelp_camp");
 
 app.use(bodyParser.urlencoded({ extended: true }));
