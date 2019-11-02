@@ -19,7 +19,7 @@ var indexRoutes       = require('./routes/index');
 const http = require('http');
 const port = process.env.PORT || 3000
 
-//
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/yelp_camp');
 
 mongoose.connect("mongodb://localhost/yelp_camp");
 
