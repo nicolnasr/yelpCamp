@@ -21,7 +21,6 @@ const port = process.env.PORT || 3000
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/yelp_camp');
 
-mongoose.connect("mongodb://localhost/yelp_camp");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressSanitizer());
